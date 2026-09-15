@@ -14,15 +14,15 @@
         header h1{font-family:'Playfair Display',serif;font-size:42px}
         header p{color:#94a3b8;margin-top:8px;font-size:18px}
         .social-links{margin-top:20px}
-        .social-links a{color:white;margin:0 12px;font-size:24px}
+        .social-links a{color:white;margin:0 12px;font-size:24px;text-decoration:none}
         nav{background:#1e293b;position:sticky;top:0;z-index:100}
-        nav ul{display:flex;justify-content:center;list-style:none;padding:12px 0;gap:30px}
+        nav ul{display:flex;justify-content:center;list-style:none;padding:12px 0;gap:30px;flex-wrap:wrap}
         nav a{color:white;text-decoration:none;font-weight:700}
         nav a:hover{color:#2E9EF7}
         .section{padding:60px 0}
         .section h2{text-align:center;font-family:'Playfair Display',serif;font-size:32px;margin-bottom:30px}
-        .about-content{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
-        .profile-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;background:#ddd}
+        .about-content{display:flex;gap:30px;align-items:center;flex-wrap:wrap;justify-content:center}
+        .profile-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid #2E9EF7;background:#ddd}
         .skills-table{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
         .skill-column{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:20px;min-width:220px}
         .skill-header{display:flex;gap:10px;align-items:center;margin-bottom:10px}
@@ -31,8 +31,8 @@
         .contact-form{max-width:600px;margin:0 auto}
         .form-group{margin-bottom:15px}
         .form-group label{display:block;font-weight:700;margin-bottom:5px}
-        .form-group input,.form-group textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px}
-        .btn{background:#2E9EF7;color:white;border:none;padding:12px 24px;border-radius:6px;cursor:pointer;font-weight:700}
+        .form-group input,.form-group textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font-family:inherit}
+        .btn{background:#2E9EF7;color:white;border:none;padding:12px 24px;border-radius:6px;cursor:pointer;font-weight:700;text-decoration:none;display:inline-block}
         .btn:hover{background:#1a7fd1}
         footer{background:#0f172a;color:#94a3b8;text-align:center;padding:20px 0;margin-top:40px}
     </style>
@@ -79,20 +79,27 @@
     <div class="container">
         <h2>My Projects</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px;">
-            <div style="border:2px solid #2E9EF7; padding:20px; border-radius:12px; background:white;">
+
+            <div style="border:2px solid #2E9EF7; padding:20px; border-radius:12px; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
                 <span style="background:#2E9EF7; color:white; padding:4px 12px; border-radius:20px; font-size:12px;">✓ Completed</span>
                 <h3 style="margin-top:12px;"><i class="fas fa-car"></i> BMW Sales Analysis</h3>
-                <p style="margin:10px 0;">Analyzed BMW sales trends by model, year, region & fuel type. Built interactive dark-themed dashboard with KPIs.</p>
-                <p><strong>Tools:</strong> Power BI, DAX, Data Cleaning</p>
-                <a href="https://github.com/Ayanda-Nsibande/BMW-Sales-Dashboard" target="_blank" class="btn" style="display:inline-block; margin-top:10px; text-decoration:none;">View Project</a>
+                <img src="https://raw.githubusercontent.com/Ayanda-Nsibande/BMW-Sales-Dashboard/main/BMW_Dashboard.png" style="width:100%; border-radius:10px; margin:12px 0; border:1px solid #ddd;" alt="BMW Dashboard">
+                <p style="margin:10px 0;">Analyzed BMW sales trends by model, year, region & fuel type. Built interactive dark-themed dashboard with KPIs, trend analysis and regional performance.</p>
+                <p><strong>Tools:</strong> Power BI, DAX, SQL, Data Cleaning</p>
+                <a href="https://github.com/Ayanda-Nsibande/BMW-Sales-Dashboard" target="_blank" class="btn" style="margin-top:12px;">View Project on GitHub</a>
             </div>
+
             <div style="border:1px dashed #ff9800; padding:20px; border-radius:12px; background:#fff8e1;">
                 <span style="background:#ff9800; color:white; padding:4px 12px; border-radius:20px; font-size:12px;">🔧 Upcoming</span>
                 <h3 style="margin-top:12px;"><i class="fas fa-users"></i> HR Attrition Analytics</h3>
-                <p style="margin:10px 0;">Currently working on! Predicting why employees leave using IBM HR dataset. SQL cleaning, SAS analysis, Power BI viz.</p>
+                <div style="width:100%; height:180px; background:#fff3cd; border-radius:10px; margin:12px 0; display:flex; align-items:center; justify-content:center; color:#ff9800; font-weight:bold; border:1px dashed #ff9800;">
+                    Dashboard Preview Coming Soon
+                </div>
+                <p style="margin:10px 0;">Currently working on! Predicting why employees leave using IBM HR dataset. Using SQL for cleaning, SAS for analysis, Power BI for visualization.</p>
                 <p><strong>Tools:</strong> SQL, SAS Studio, Power BI</p>
                 <p style="color:#ff9800; font-weight:bold; margin-top:10px;">In Progress - Coming Dec 2026</p>
             </div>
+
         </div>
     </div>
 </section>
@@ -118,9 +125,12 @@
         <h2>Send me a message</h2>
         <form action="https://formsubmit.co/ayandazamaswazi62@gmail.com" method="POST" class="contact-form">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New message from portfolio!">
+            <input type="hidden" name="_subject" value="New portfolio message!">
+            <input type="hidden" name="_template" value="table">
+            <p style="text-align:center; margin-bottom:20px;">Interested in collaborating? I'd love to hear from you!</p>
             <div class="form-group"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
             <div class="form-group"><label>Email</label><input type="email" name="email" required placeholder="Your email"></div>
+            <div class="form-group"><label>Subject</label><input type="text" name="subject" required placeholder="Subject"></div>
             <div class="form-group"><label>Message</label><textarea name="message" rows="5" required placeholder="Your message"></textarea></div>
             <button type="submit" class="btn">Send Message</button>
         </form>
@@ -128,5 +138,6 @@
 </section>
 
 <footer><div class="container"><p>&copy; 2026 Ayanda Nsibande. All rights reserved.</p></div></footer>
+
 </body>
 </html>
