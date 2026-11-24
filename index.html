@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayanda Nsibande | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Lato',sans-serif;background:#fff;color:#333;line-height:1.6}
+        .container{max-width:1000px;margin:0 auto;padding:0 20px}
+        header{background:#0f172a;color:white;padding:60px 0;text-align:center}
+        header h1{font-family:'Playfair Display',serif;font-size:42px}
+        header p{color:#94a3b8;margin-top:8px;font-size:18px}
+        .social-links{margin-top:20px}
+        .social-links a{color:white;margin:0 12px;font-size:24px;text-decoration:none;transition:color 0.2s}
+        .social-links a:hover{color:#2E9EF7}
+        nav{background:#1e293b;position:sticky;top:0;z-index:100}
+        nav ul{display:flex;justify-content:center;list-style:none;padding:12px 0;gap:30px;flex-wrap:wrap}
+        nav a{color:white;text-decoration:none;font-weight:700;transition:color 0.2s}
+        nav a:hover{color:#2E9EF7}
+        .section{padding:60px 0}
+        .section h2{text-align:center;font-family:'Playfair Display',serif;font-size:32px;margin-bottom:30px}
+        .about-content{display:flex;gap:30px;align-items:center;flex-wrap:wrap;justify-content:center}
+        .profile-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid #2E9EF7;background:#ddd}
+        .about-text{flex:1;min-width:280px}
+        .about-text p{margin-bottom:10px}
+        .skills-table{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+        .skill-column{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:20px;min-width:220px}
+        .skill-header{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+        .skill-list{list-style:none}
+        .skill-list li{background:white;margin:6px 0;padding:6px 10px;border-radius:6px;border:1px solid #eee}
+        .contact-form{max-width:600px;margin:0 auto}
+        .form-group{margin-bottom:15px}
+        .form-group label{display:block;font-weight:700;margin-bottom:5px}
+        .form-group input,.form-group textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px;font-family:inherit}
+        .form-group input:focus,.form-group textarea:focus{outline:none;border-color:#2E9EF7;box-shadow:0 0 0 3px rgba(46,158,247,0.15)}
+        .btn{background:#2E9EF7;color:white;border:none;padding:12px 24px;border-radius:6px;cursor:pointer;font-weight:700;text-decoration:none;display:inline-block;transition:background 0.2s}
+        .btn:hover{background:#1a7fd1}
+        .project-card{background:white;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,0.05);border:2px solid #e2e8f0;transition:transform 0.2s, box-shadow 0.2s}
+        .project-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.1)}
+        .project-card.completed{border-color:#2E9EF7}
+        .project-card.upcoming{border:1px dashed #ff9800;background:#fff8e1}
+        .badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;color:white}
+        .badge.done{background:#2E9EF7}
+        .badge.soon{background:#ff9800}
+        .project-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:20px}
+        .dashboard-preview{width:100%;border-radius:10px;margin:12px 0;border:1px solid #ddd}
+        .placeholder-preview{width:100%;height:180px;background:#fff3cd;border-radius:10px;margin:12px 0;display:flex;align-items:center;justify-content:center;color:#ff9800;font-weight:bold;border:1px dashed #ff9800;text-align:center;padding:20px}
+        .tools{margin:10px 0}
+        .tools strong{color:#0f172a}
+        .project-title{margin-top:12px;display:flex;align-items:center;gap:8px}
+        .project-title i{color:#2E9EF7}
+        footer{background:#0f172a;color:#94a3b8;text-align:center;padding:20px 0;margin-top:40px}
+        footer a{color:#2E9EF7;text-decoration:none}
+        @media (max-width:600px){
+            header h1{font-size:32px}
+            .section h2{font-size:26px}
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <div class="container">
+        <h1>Ayanda Nsibande</h1>
+        <p>Data Analyst | Power BI Developer | SQL Specialist</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ayanda-nsibande-1b554738b/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Ayanda-Nsibande" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/27634914894" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="assets/profile.jpg" alt="Ayanda Nsibande" class="profile-photo">
+            <div class="about-text">
+                <p>Entry-level Data Analyst specializing in transforming raw data into actionable insights through interactive visualizations and clear data storytelling.</p>
+                <p>Currently honing my expertise in Power BI, SQL, and SAS, I create comprehensive reports that uncover patterns and trends to support data-driven decision-making.</p>
+                <p><strong>What I do:</strong> I help businesses make data-driven decisions by building interactive dashboards and writing efficient SQL queries to uncover trends in their data.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section" style="background:#f8fafc;">
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card completed">
+                <span class="badge done">✓ Completed</span>
+                <h3 class="project-title"><i class="fas fa-car"></i> BMW Sales Analysis</h3>
+                <img src="https://raw.githubusercontent.com/Ayanda-Nsibande/BMW-Sales-Dashboard/main/BMW_Dashboard.png" class="dashboard-preview" alt="BMW Sales Dashboard">
+                <p>Analyzed BMW sales trends by model, year, region &amp; fuel type. Built an interactive dark-themed dashboard with KPIs, trend analysis, and regional performance insights.</p>
+                <p class="tools"><strong>Tools:</strong> Power BI, DAX, SQL, Data Cleaning</p>
+                <a href="https://github.com/Ayanda-Nsibande/BMW-Sales-Dashboard" target="_blank" class="btn">View Project on GitHub</a>
+            </div>
+
+            <div class="project-card completed">
+                <span class="badge done">✓ Completed - Power BI</span>
+                <h3 class="project-title"><i class="fas fa-users"></i> HR Attrition Analytics</h3>
+                <img src="Power BI/HR_Attrition_Dashboard.png" class="dashboard-preview" alt="HR Attrition Dashboard - Power BI">
+                <p>Built in Power BI. Analyzed employee attrition using the IBM HR dataset to uncover why employees leave. Found employees who work overtime are 3x more likely to leave (31% vs 10%). Dashboard shows attrition by job satisfaction, business travel, and marital status.</p>
+                <p class="tools"><strong>Tools:</strong> Power BI, DAX, SQL, SAS Studio</p>
+                <p><strong>Key Finding:</strong> OverTime is the #1 driver of attrition.</p>
+                <a href="https://github.com/Ayanda-Nsibande/HR-Attrition-Analytics" target="_blank" class="btn">View Power BI Project on GitHub</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="container">
+        <h2>Technical Skillset</h2>
+        <div class="skills-table">
+            <div class="skill-column">
+                <div class="skill-header"><i class="fas fa-chart-pie" style="color:#2E9EF7;"></i><h3>Visualization</h3></div>
+                <ul class="skill-list"><li>Power BI</li><li>DAX</li><li>Excel</li></ul>
+            </div>
+            <div class="skill-column">
+                <div class="skill-header"><i class="fas fa-search-plus" style="color:#2E9EF7;"></i><h3>Analysis</h3></div>
+                <ul class="skill-list"><li>SQL</li><li>SAS Studio</li><li>R</li><li>Data Cleaning</li></ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section" style="background:#f8fafc;">
+    <div class="container">
+        <h2>Send Me a Message</h2>
+        <form action="https://formsubmit.co/ayandazamaswazi62@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New portfolio message!">
+            <input type="hidden" name="_template" value="table">
+            <p style="text-align:center;margin-bottom:20px;">Interested in collaborating? I'd love to hear from you!</p>
+            <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required placeholder="Your name"></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="Your email"></div>
+            <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required placeholder="Subject"></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea></div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Ayanda Nsibande. All rights reserved. | <a href="https://github.com/Ayanda-Nsibande" target="_blank">GitHub</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
